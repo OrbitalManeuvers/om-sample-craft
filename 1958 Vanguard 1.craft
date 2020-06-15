@@ -2,7 +2,7 @@ ship = 1958 Vanguard 1
 version = 1.8.1
 description = The Navy gets one right!
 type = VAB
-size = 1.24694777,18.5800018,4.48054743
+size = 1.24694777,18.579998,4.48054743
 steamPublishedFileId = 0
 persistentId = 722531997
 rot = 0,0,0,0
@@ -38,8 +38,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = bluedog.UpperSolids.Altair_4287819044
-	attN = bottom,bluedog.UpperSolids.Altair_4287819044_0|-0.0799999982|0_0|-1|0_0|-0.0799999982|0_0|-1|0
+	link = bluedog.Vanguard.S2.LongProbeDecoupler_4287026550
+	attN = bottom,bluedog.Vanguard.S2.LongProbeDecoupler_4287026550_0|-0.0799999982|0_0|-1|0_0|-0.0799999982|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -247,12 +247,103 @@ PART
 }
 PART
 {
+	part = bluedog.Vanguard.S2.LongProbeDecoupler_4287026550
+	partName = Part
+	persistentId = 2945801433
+	pos = 0.000666826963,15.0562372,0.0274121836
+	attPos = 0,0,0
+	attPos0 = 0,-0.116000175,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 1
+	sidx = 0
+	sqor = 0
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = bluedog.UpperSolids.Altair_4287819044
+	attN = top,bluedog.Vanguard.Satellite1_4287841352_0|0.0359999985|0_0|1|0_0|0.0359999985|0_0|1|0
+	attN = bottom,bluedog.UpperSolids.Altair_4287819044_0|-0.0359999985|0_0|-1|0_0|-0.0359999985|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = tjs_DecouplerLight
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
 	part = bluedog.UpperSolids.Altair_4287819044
 	partName = Part
 	persistentId = 944626775
-	pos = 0.000666826963,14.5842371,0.0274121836
+	pos = 0.000666826963,14.5122366,0.0274121836
 	attPos = 0,0,0
-	attPos0 = 0,-0.588000298,0
+	attPos0 = 0,-0.544000626,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -260,19 +351,19 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 0
+	istg = 1
 	resPri = 0
-	dstg = 0
+	dstg = 2
 	sidx = 0
-	sqor = 0
-	sepI = -1
+	sqor = 1
+	sepI = 0
 	attm = 0
 	sameVesselCollision = False
 	modCost = 5.60000038
 	modMass = 0.00139999995
 	modSize = 0,0,0
 	link = bluedog.SpinDecoupler.p3125m_4287777938
-	attN = top,bluedog.Vanguard.Satellite1_4287841352_0|0.508000016|0_0|1|0_0|0.508000016|0_0|1|0
+	attN = top,bluedog.Vanguard.S2.LongProbeDecoupler_4287026550_0|0.508000016|0_0|1|0_0|0.508000016|0_0|1|0
 	attN = bottom,bluedog.SpinDecoupler.p3125m_4287777938_0|-0.508000016|0_0|-1|0_0|-0.508000016|0_0|-1|0
 	EVENTS
 	{
@@ -309,7 +400,7 @@ PART
 		EngineIgnited = False
 		engineShutdown = False
 		currentThrottle = 0
-		thrustPercentage = 100
+		thrustPercentage = 26.5
 		manuallyOverridden = False
 		includeinDVCalcs = False
 		stagingEnabled = True
@@ -325,7 +416,7 @@ PART
 			}
 			ShutdownAction
 			{
-				actionGroup = None
+				actionGroup = Custom10
 				wasActiveBeforePartWasAdjusted = False
 			}
 			ActivateAction
@@ -516,7 +607,7 @@ PART
 	part = bluedog.SpinDecoupler.p3125m_4287777938
 	partName = Part
 	persistentId = 1542619561
-	pos = 0.000666826963,14.0511007,0.0274121836
+	pos = 0.000666826963,13.9791002,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-0.533136368,0
 	rot = 0,0,0,1
@@ -526,12 +617,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 2
 	resPri = 0
-	dstg = 1
+	dstg = 3
 	sidx = 0
-	sqor = 1
-	sepI = 1
+	sqor = 2
+	sepI = 2
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -740,7 +831,7 @@ PART
 	part = bluedog.PSM.0p3125m.MediumProfile_4287801498
 	partName = Part
 	persistentId = 3171175452
-	pos = 0.000666826963,13.9930382,0.0274121836
+	pos = 0.000666826963,13.9210377,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-0.0580625534,0
 	rot = 0,0,0,1
@@ -750,12 +841,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 3
 	resPri = 0
-	dstg = 3
-	sidx = 1
-	sqor = 1
-	sepI = 1
+	dstg = 5
+	sidx = 0
+	sqor = 3
+	sepI = 2
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -900,7 +991,7 @@ PART
 	part = bluedog.VanguardFairing.SAF_4287813922
 	partName = Part
 	persistentId = 3685591787
-	pos = 0.000666826963,13.9165173,0.0274121836
+	pos = 0.000666826963,13.8445168,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-0.0765209198,0
 	rot = 0,0,0,1
@@ -910,12 +1001,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 1
+	istg = 3
 	resPri = 0
-	dstg = 5
+	dstg = 7
 	sidx = 0
 	sqor = 2
-	sepI = 1
+	sepI = 2
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -995,7 +1086,7 @@ PART
 	part = bluedog.Vanguard.S2.Tank_4287769676
 	partName = Part
 	persistentId = 3539052462
-	pos = 0.000666826963,12.6395168,0.0274121836
+	pos = 0.000666826963,12.5675163,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-1.27700043,0
 	rot = 0,0,0,1
@@ -1005,12 +1096,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 1
+	istg = 3
 	resPri = 0
-	dstg = 6
+	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 2
 	attm = 0
 	sameVesselCollision = False
 	modCost = 2.86102295E-06
@@ -1245,7 +1336,7 @@ PART
 	part = bluedog.Able.Engine_4287765978
 	partName = Part
 	persistentId = 2703228695
-	pos = 0.000666826963,11.1908178,0.0274121836
+	pos = 0.000666826963,11.1188173,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-1.448699,0
 	rot = 0,0,0,1
@@ -1255,12 +1346,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 2
+	istg = 4
 	resPri = 0
-	dstg = 6
+	dstg = 8
 	sidx = 0
-	sqor = 2
-	sepI = 1
+	sqor = 4
+	sepI = 2
 	attm = 0
 	sameVesselCollision = False
 	modCost = 50
@@ -1571,7 +1662,7 @@ PART
 	part = bluedog.Vanguard.S1.Interstage_4287763758
 	partName = Part
 	persistentId = 3699674153
-	pos = 0.000666826963,10.8630762,0.0274121836
+	pos = 0.000666826963,10.7910757,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-1.77644062,0
 	rot = 0,0,0,1
@@ -1581,12 +1672,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 3
+	istg = 5
 	resPri = 0
-	dstg = 7
+	dstg = 9
 	sidx = 0
-	sqor = 3
-	sepI = 3
+	sqor = 5
+	sepI = 5
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -1763,7 +1854,7 @@ PART
 	part = bluedog.Vanguard.S1.Tank_4287761416
 	partName = Part
 	persistentId = 444298354
-	pos = 0.000666826963,6.72553635,0.0274121836
+	pos = 0.000666826963,6.65353584,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-4.13753986,0
 	rot = 0,0,0,1
@@ -1773,12 +1864,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 3
+	istg = 5
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 3
+	sepI = 5
 	attm = 0
 	sameVesselCollision = False
 	modCost = -1.23977661E-05
@@ -1922,7 +2013,7 @@ PART
 	part = bluedog.Vanguard.GE405_4287755976
 	partName = Part
 	persistentId = 2231953643
-	pos = 0.000666826963,2.58082581,0.0274121836
+	pos = 0.000666826963,2.5088253,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-4.14471054,0
 	rot = 0,0,0,1
@@ -1932,12 +2023,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 5
+	istg = 7
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = 0
-	sqor = 5
-	sepI = 3
+	sqor = 7
+	sepI = 5
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -2417,7 +2508,7 @@ PART
 	part = AM.MLP.VanguardLaunchStand_4287617866
 	partName = Part
 	persistentId = 3128822017
-	pos = 0.000666826963,0.0330657959,0.0274121836
+	pos = 0.000666826963,-0.0389347076,0.0274121836
 	attPos = 0,0,0
 	attPos0 = 0,-2.54776001,0
 	rot = 0,0,0,1
@@ -2427,12 +2518,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 4
+	istg = 6
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = 0
-	sqor = 4
-	sepI = 4
+	sqor = 6
+	sepI = 6
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -2480,8 +2571,8 @@ PART
 	{
 		name = LaunchClamp
 		isEnabled = True
-		scaleFactor = 1.66131341
-		height = 0.0830659866
+		scaleFactor = 0.221308812
+		height = 0.0110654831
 		stagingEnabled = True
 		towerRot = 0,0,0,1
 		EVENTS
@@ -2635,7 +2726,7 @@ PART
 	part = AM.MLP.VanguardServiceTower_4287615680
 	partName = Part
 	persistentId = 408218398
-	pos = 0.000666826963,0.268022537,3.4241519
+	pos = 0.000666826963,0.196022034,3.4241519
 	attPos = 0,0.334957123,-1.10326028
 	attPos0 = 0,-0.100000381,4.5
 	rot = 0,-0.707106829,0,0.707106829
@@ -2645,12 +2736,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = False
-	istg = 4
+	istg = 6
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 6
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -2803,7 +2894,7 @@ PART
 	part = AM.MLP.LaunchStandSmallUmbilical_4287611680
 	partName = Part
 	persistentId = 634956326
-	pos = 0.000666856766,8.26802254,3.01015139
+	pos = 0.000666856766,8.19602203,3.01015019
 	attPos = 0,0,0
 	attPos0 = -0.413999915,8,2.980231E-08
 	rot = 0,-0.707106829,0,0.707106829
@@ -2813,12 +2904,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 6
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = 1
-	sqor = 4
-	sepI = 4
+	sqor = 6
+	sepI = 6
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -3039,7 +3130,7 @@ PART
 	part = AM.MLP.LaunchStandSmallUmbilical_4287610878
 	partName = Part
 	persistentId = 493556428
-	pos = 0.000666856766,14.2680225,3.01015139
+	pos = 0.000666856766,14.196022,3.01015019
 	attPos = 0,0,0
 	attPos0 = -0.413999915,14,2.980231E-08
 	rot = 0,-0.707106829,0,0.707106829
@@ -3049,12 +3140,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 6
 	resPri = 0
-	dstg = 8
+	dstg = 10
 	sidx = 2
-	sqor = 4
-	sepI = 4
+	sqor = 6
+	sepI = 6
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
