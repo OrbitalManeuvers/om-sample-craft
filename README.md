@@ -18,6 +18,7 @@ Vanguard - Unstable near air. Enough dV in the 3rd stage for Earth escape veloci
 Pioneer - I honestly don't know a ton about this mission, but the craft has enough dV to get into LEO and then lower Pe to at least Venus altitude.
 
 MR-3 - Since I play with part and Kerbal G forces on, I fly this fairly shallow to avoid excessive G's on re-entry.
+
 MA-6 - In KSRSS I'm typically shooting for 100x100(ish) with the Atlas. Retros used for de-orbit.
 
 Ranger 4 - Friznit's incredibly valuable Wiki doesn't show the EIA, but in my experience the EDA1/2 do nothing on their own so I added it. The SRM "landing" is challenging!
