@@ -3,7 +3,7 @@
 ## What is it?
 Science Planner assists you in selecting the optimal set of science experiments to take on your missions.
 
-It does this by evaluating the experiments you have unlocked, and comparing against what has already been run at your destination. If an experiment would yield science results at some point in your mission, the experiment is recommended.
+It does this by evaluating the experiments you have unlocked and comparing against what has already been run at your destination. If an experiment would yield science results at some point in your mission, the experiment is recommended.
 
 ## Usage
 
